@@ -17,16 +17,16 @@ SIGNAL(TIMER0_COMPA_vect) {
   
   if (x == lastflowpinstate) {
     lastflowratetimer++;
-    return; // nothing changed!
+    return; // nada mudou!
   }
   
   if (x == HIGH) {
-    //low to high transition!
+    //low to high  transição!
     pulses++;
   }
   lastflowpinstate = x;
   flowrate = 1000.0;
-  flowrate /= lastflowratetimer;  // in hertz
+  flowrate /= lastflowratetimer;  // Em hertz
   lastflowratetimer = 0;
 }
 
