@@ -113,8 +113,11 @@ void loop()                     // executar uma e outra vez
         liters -= 6;
         liters /= 60.0;
     */
-    Serial.print (liters, liters3);
-    Serial.println ("S1 Litros","S2 Litros");
+    Serial.print (liters);
+    Serial.print (" Litros - Sensor 1  /  ");
+
+    Serial.print (liters3);
+    Serial.println (" Litros - Sensor 2");
 
     delay (100);
 }
