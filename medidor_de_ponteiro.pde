@@ -8,7 +8,7 @@ PImage ponteiro; //Ponteiro
 //=======================
 
 int valor_recebido; //Cria uma variável para armazenas o valor recebido pela serial
-int valor_pot; //Cria uma variável para armazenar o valor do potenciometro
+int valor_percent; //Cria uma variável para armazenar o valor do percentual
 
 int ajuste_y=14; //Variável para ajusta o eixo x na tela (Centralizar)
                  //Se não precisar de ajuste deixe com valor 0
@@ -39,8 +39,8 @@ void draw()
   {
     valor_recebido = myPort.read(); //Armazena o que foi lido dentro da variável valor recebido
     
-    if (valor_recebido<181) valor_pot = valor_recebido; //Se o valor recebido for menor que 181,
-                                                        //armazena esse valor dentro da variável valor_pot
+    if (valor_recebido<181) valor_percent = valor_recebido; //Se o valor recebido for menor que 181,
+                                                        //armazena esse valor dentro da variável valor_percent
   }
 
   background(fundo); //Atualiza a imagem de fundo (backgroud) da interface
@@ -50,9 +50,9 @@ void draw()
 
 
   //********************************************************
-  //float c = radians(valor_pot-90); //Pega o valor lido referendo ao sensor
+  //float c = radians(valor_percent-90); //Pega o valor lido referendo ao sensor
                                    
-  rotate(radians(valor_pot-90)); //Pega o valor lido referendo ao sensor,
+  rotate(radians(valor_percent-90)); //Pega o valor lido referendo ao sensor,
                                  //Subtrai 90 desse valor, converte para radianos e
                                  //Executa a função de rotação da tela
                                  
