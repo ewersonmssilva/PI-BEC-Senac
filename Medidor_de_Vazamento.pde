@@ -1,7 +1,7 @@
 import processing.serial.*; //Importa a biblioteca para abrir uma comunicação Serial
 Serial myPort; //Instância a biblioteca para a comuniação Serial
 
-int linefeed = 10; // new line ASCII = 10
+int linefeed = 10; // nova linha ASCII = 10
 
 //Cria uma instância para cada imagem da interface
 PImage fundo; //Background
