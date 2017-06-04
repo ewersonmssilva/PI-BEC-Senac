@@ -89,8 +89,6 @@ void setup()
    useInterrupt2(true);
 }
 
-void(* resetFunc) (void) = 0; //declare reset function @ address 0
-
 void loop()                     // executar uma e outra vez
 {
 
@@ -126,7 +124,7 @@ void loop()                     // executar uma e outra vez
    // Serial.print (" Litros - Sensor 2  /  ");
 
     int percent = (liters - liters2) / liters2 * 100; //Calcula o percentual das leituras
-    int lost = liters - liters2;
+    int lost = liters - liters2; //Calcula desperdício em litros
 
     // Condições para o funcionamento do ponteiro
     if (percent < 0){
@@ -136,11 +134,8 @@ void loop()                     // executar uma e outra vez
     }
     percent = percent * 1.8;
 
-    //Serial.write (percent); //Envia para a interface (Processing) o valor caculado entre os sensores
-                           //que será um valor de 0 a 180
-
-  Serial.print(percent);
-  Serial.print(",");
+  Serial.print(percent); //Envia para a interface (Processing) o valor caculado entre os sensores
+  Serial.print(",");     //que será um valor de 0 a 180
   Serial.println(lost);
 
   delay (50); 
