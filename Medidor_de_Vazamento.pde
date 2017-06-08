@@ -1,13 +1,12 @@
 import processing.serial.*; //Importa a biblioteca para abrir uma comunicação Serial
 Serial myPort; //Instância a biblioteca para a comuniação Serial
 
-int linefeed = 10; // nova linha ASCII = 10
-
 //Cria uma instância para cada imagem da interface
 PImage fundo; //Background
 PImage ponteiro; //Ponteiro       
 //=======================
 
+int linefeed = 10; // nova linha ASCII = 10
 int percent = 0; //Esta variável conterá a leitura da pecentagem
 int litros = 0; //Esta variável conterá a leitura de litros perdidos
 int ajuste_y=170; //Variável para ajusta o eixo x na tela (Centralizar)
