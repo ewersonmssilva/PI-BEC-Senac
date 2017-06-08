@@ -1,6 +1,5 @@
 // Qual pino usar para ler o sensor? Pode usar qualquer pino!
 #define FLOWSENSORPIN1 2
-
 #define FLOWSENSORPIN2 3
 
 // Conta quantos pulsos!
@@ -107,7 +106,6 @@ void setup()
 
 void loop()                     // executar uma e outra vez
 {
-
     // Serial.print ("Freq: ");
     // Serial.println (flowrate);
     // Serial.print ("Pulses: ");
