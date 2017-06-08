@@ -108,7 +108,7 @@ void loop()                     // executar uma e outra vez
 
     float liters2 = pulses2;
     liters2 /= 7.5;
-    liters2 /= 60.0;
+    liters2 /= 59.4685;
 
     /*
         // Se for um sensor de bronze utilizar o seguinte cálculo
